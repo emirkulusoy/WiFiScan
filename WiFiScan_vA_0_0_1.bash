@@ -17,6 +17,10 @@ FILENAME="$DATE_DIR/WiFiScanTest_${DATE}_${HOUR}.csv"
 touch "$FILENAME"
 chown "$USERNAME":"$USERNAME" "$FILENAME"
 
+# Adding column headers
+echo "ID,TIMESTAMP,NAME,SSID,SSID-HEX,MODE,CHAN,FREQ,RATE,SIGNAL,SECURITY,WPA-FLAGS,RSN-FLAGS,DEVICE,ACTIVE,IN-USE" > "$FILENAME"
+
+
 while true; do #endless lopp to collect data until you stop.
   # Prompt the user to continue or q
   echo "Collecting data, you can stop it with ctrl+C "
