@@ -1,0 +1,17 @@
+WiFi Scan Script
+	This bash script is designed to collect WiFi information (SSID,SSID-HEX,MODE,CHAN,FREQ,RATE,SIGNAL,SECURITY,WPA-FLAGS,RSN-FLAGS,DEVICE,ACTIVE,IN-USE). 
+	It returns static data with an ID column for each iteration. These IDs are needed while changing this static data to vector data via QGIS Python.
+	The script runs until you type "ctrl+C" on the command line and keep adding new test output to the same file. It creates a new file whenever you stop the bash and run it again.
+
+Prerequisites/Troubleshooting:
+    nmcli: Make sure nmcli (NetworkManager command-line tool) is installed on your system.
+    Bash: The script is written for the Bash shell.
+    Permission Issues: Make sure you have the required rights to run sudo nmcli if you experience permission problems.
+
+Usage
+    To make the bash file executable, please run the command below (please update version#):
+		chmod +x WiFiScan_vA_0_0_1.bash
+	Then you can simply run bash as below:
+		sudo ./WiFiScan_vA_0_0_1.bash
+    To stop the Script: 
+		Type "ctrl+C"
